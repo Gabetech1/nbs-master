@@ -1,0 +1,56 @@
+
+.center-me {
+    height: 100vh;
+    position: relative;
+}
+
+.register-form{
+    width: 400px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 90px;
+}
+.card {
+    background-color: #efefef;
+}
+
+.card .content {
+    padding: 45px 25px 10px 25px;
+}
+
+.btn-fill {
+    color: #FFFFFF;
+    background-color: #d2720a;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    border: none;
+}
+.btn-info {
+    border-color: none;
+}
+
+@media (max-width: 480px){
+.register-form {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+}
+
+.newUser{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}

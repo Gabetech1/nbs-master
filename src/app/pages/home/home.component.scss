@@ -1,0 +1,72 @@
+.section-title-page1 {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 75px;
+    background-image: url("../../../assets/main/assets/nulimage/slider.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.b-main-slider__title-wrap {
+    color: #fff;
+    max-width: 400px;
+}
+
+@media (min-width: 767) and (max-width: 867) {
+    .b-main-slider__title {
+        font-size: 50px;
+    }
+}
+
+
+
+.btn, .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding: 1.5rem 4rem; */
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 10.4;
+    transition: all .2;
+    position: relative;
+ /*    font-size: 1.6rem; */
+    border: none;
+    cursor: pointer; }
+  
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  
+  .btn:active, .btn:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  
+  .btn--orange {
+    background-color: #ee881c;
+    color: #fff; }
+    .btn--orange::after {
+      background-color: #ee881c; }
+
+  
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  
+  .btn--animated {
+    animation: moveInBottom .9s ease-out .75s;
+    animation-fill-mode: backwards; }
+  
+ 
+  

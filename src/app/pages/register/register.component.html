@@ -1,0 +1,67 @@
+<div class="main-content1 center-me" >
+    <div class="container-fluid register-form">
+        <div class="row">
+            <div class="logo_box">
+                <img src="../../../assets/nulimage/logo1a.png" alt="" class="logo">
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header text-center">
+                        <h4 class="title">Register User</h4>
+                    </div>
+                    <div class="content">
+                        <form  #form="ngForm" (ngSubmit)="register(form)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" ngModel name="fname" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" ngModel name="lname" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" class="form-control" ngModel name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" ngModel name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <input type="password" class="form-control" ngModel name="cpassword" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>User Role</label>
+                                        <input type="text" class="form-control" ngModel name="role">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-fill pull-right" [disabled]="form.invalid">Register User</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

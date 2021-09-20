@@ -1,0 +1,42 @@
+<div class="main-content1 center-me" >
+    <div class="container-fluid register-form">
+        <div class="row">
+            <div class="logo_box">
+                <img src="../../../assets/nulimage/logo1a.png" alt="" class="logo">
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="content">
+                        <form  #form="ngForm" (ngSubmit)="login(form)">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" class="form-control" ngModel name="email" required>
+                                    </div>
+                                </div>
+                            </div>                           
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" ngModel name="password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-fill" [disabled]="form.invalid">Login</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+
+                        <div class="text-center newUser">
+                           <a href="">Back to Home Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header1">
+                        <h4 class="title">Tracking Database</h4>
+                        <!-- <p class="category">Here is a subtitle for this table</p> -->
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                          <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of ship">
+                                        <td>{{row.tracking_number}}</td>
+                                        <td>{{row.package}}</td>
+                                        <td>{{row.sender_name}}</td>
+                                        <td>{{row.recipient_name}}</td>
+                                        <td>{{row.tracking_status}}</td>
+                                        <td>{{row.tracking_date}}</td>
+                                        <td>
+                                            <button class="edit" routerLink="/nul-admin/update_tracking/{{row.id}}"><i class="pe-7s-eyedropper"></i></button>
+                                            <form #form="ngForm" (ngSubmit)="delete(row.id)">
+                                            <button class="delete" type="submit"><i class="pe-7s-trash"></i></button>
+                                        </form>
+                                            
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>

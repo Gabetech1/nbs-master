@@ -1,0 +1,127 @@
+#main-slider {
+position: relative;
+}
+
+.nav-link {
+  color: #222;
+}
+
+.bg-video {
+    position: absolute;
+    right: 1000;
+    top: 0;
+    height: 100%;
+    width: 100%;
+   /*  z-index: -1; */
+    opacity: 1;
+    overflow: hidden; }
+    .bg-video__content {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+  
+.ui-title1{
+  font-size: 20px;
+  letter-spacing: .06em;
+  line-height: 1.8em;
+  text-transform: none;
+}
+
+.header-main {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px -20px 15px 53rem;
+
+}
+ .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-60%, -20%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0px 0px 15px 23px;
+  }
+
+ /*  .header__text-box h1 {
+    margin: 0;
+  } */
+
+  .heading-primary {
+    color: #fff;
+    
+    backface-visibility: hidden;
+    margin-bottom: 1rem; }
+    .heading-primary--main {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      animation: moveInLeft 1s ease-out; }
+  
+      @media only screen and (max-width: 767px){
+        span.heading-primary--main {
+          font-size: 2rem;
+      }
+      .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, 16%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px 0px 0px 15px;
+    }
+      }
+      @media only screen and (max-width: 600px){
+        span.heading-primary--main {
+          font-size: 2rem;
+      }
+      .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, 16%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px 0px 0px 15px;
+    }
+      }
+      @media only screen and (max-width: 480px){
+        span.heading-primary--main {
+          font-size: 2rem;
+      }
+      .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, 16%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px 0px 0px 15px;
+    }
+      }
+      @media only screen and (max-width: 320px){
+        span.heading-primary--main {
+          font-size: 1.5rem;
+      }
+      .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, 20%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px 0px 0px 15px;
+    }
+      }
+
+      button.menu-mobile-button.js-toggle-mobile-slidebar.toggle-menu-button {
+        background-color: #555;
+    }
+
+    .logisco-header-container.logisco-header-full {
+      background: #fff;
+  }
+
+  
+  iframe {
+    width: 100%;
+}

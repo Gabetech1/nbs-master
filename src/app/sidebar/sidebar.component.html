@@ -1,0 +1,47 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a routerLink="/tracking_list" class="simple-text">
+            <div class="logo-img">
+                <img src="/assets/nulimage/logo1a.png"/>
+            </div>
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+       <!--  <li *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  (click)="sidebarToggle()" [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li> -->
+        <li>
+            <a routerLink="tracking_list">
+                <i class="pe-7s-note2"></i>
+                <p>Tracking List</p>
+            </a>
+        </li>
+        <li>
+            <a routerLink="new_tracking">
+                <i class="pe-7s-helm"></i>
+                <p>NEW TRACKING</p>
+            </a>
+        </li>
+        <li  class="active-pro">
+            <a routerLink="user-login">
+                <i class="pe-7s-user"></i>
+                <p>Log Out</p>
+            </a>
+        </li>
+    </ul>
+   
+    <!-- <ul class="nav responsive-nav">
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  (click)="sidebarToggle()" [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul> -->
+</div>
