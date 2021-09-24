@@ -7,21 +7,32 @@ declare var $: any;
   providedIn: "root",
 })
 export class ApiService {
-  url = "https://clientapi.gabeshub.com/nulbulk";
+  url = "https://gabeshub.com";
+  /* url = {
+    "/core/*": {
+      target: "http://localhost/clientapi/nulbulk/smtp",
+      secure: false,
+      changeOrigin: true,
+      logLevel: "debug",
+    },
+  }; */
   //url = 'http://localhost/nulbulk/nulbulk_backend';
 
   constructor(private http: HttpClient) {}
 
   register(data) {
+    console.log(data);
     return this.http.post(this.url + "/siginUpUser.php", data);
   }
   login(data) {
     var headers = new HttpHeaders();
     headers.append("Accept", "application/json");
     headers.append("Content-Type", "application/json");
+    headers.append("Access-Control-Allow-Origin", "*");
+    headers.append("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     headers.append(
-      "Access-Control-Allow-Origin",
-      "https://nulbulkshipping.com"
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
     );
     console.log(data);
     return this.http.post(this.url + "/loginUser.php", data, {
@@ -56,7 +67,13 @@ export class ApiService {
   }
 
   sendMessage(data) {
-    return this.http.post(this.url + "/sendmail.php", data);
+    var headers = new HttpHeaders();
+    headers.append("Accept", "application/json");
+    headers.append("Content-Type", "application/json");
+    headers.append("Access-Control-Allow-Origin", "*");
+    return this.http.post(this.url + "/index.php", data, {
+      headers: headers,
+    });
   }
 
   isAuthenticated() {
