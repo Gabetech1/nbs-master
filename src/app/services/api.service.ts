@@ -7,7 +7,8 @@ declare var $: any;
   providedIn: "root",
 })
 export class ApiService {
-  url = "https://gabeshub.com";
+  url = "https://clientapi.gabeshub.com/nulbulk_backend";
+  smtp_url = "https://clientapi.gabeshub.com/smtp";
   /* url = {
     "/core/*": {
       target: "http://localhost/clientapi/nulbulk/smtp",
@@ -16,7 +17,8 @@ export class ApiService {
       logLevel: "debug",
     },
   }; */
-  //url = 'http://localhost/nulbulk/nulbulk_backend';
+  //url = "http://localhost/nulbulk_backend";
+  //smtp_url = "http://localhost/nulbulk_backend";
 
   constructor(private http: HttpClient) {}
 
@@ -71,7 +73,7 @@ export class ApiService {
     headers.append("Accept", "application/json");
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "*");
-    return this.http.post(this.url + "/index.php", data, {
+    return this.http.post(this.smtp_url + "/sendmail.php", data, {
       headers: headers,
     });
   }

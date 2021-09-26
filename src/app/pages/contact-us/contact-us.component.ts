@@ -20,23 +20,32 @@ export class ContactUsComponent implements OnInit {
   ngOnInit() {}
 
   sendMessage() {
-    console.log(this.contactForm.value.username);
+    // console.log(this.contactForm.value.username);
     var data = {
-      name: "jessy",
-      phone: "345t434",
-      email: "jessyjee77@gmail.com",
-      message: "Hello World",
-      sender: "admin@nulbulkshipping.com",
-      senderName: "Nulbulk",
-      receiverEmail: "jessyjee77@gmail.com",
-      receiverName: "Jessy",
+      full_name: this.contactForm.value.username,
+      phone_number: this.contactForm.value.phone,
+      email: this.contactForm.value.email,
+      subject: "Filled Contact Form",
+      message: this.contactForm.value.message,
+      admin_email: "admin@nulbulkshipping.com",
+      site_name: "Nulbulk Shipping",
+      receiver_email: "jessyjee77@gmail.com",
+      receiver_name: "Jessy",
     };
     this.api.sendMessage(data).subscribe(
       (res) => {
-        console.log(res);
+        // console.log(res);
       },
       (err) => {
-        console.log(err);
+        // console.log(err);
+        if (err.error.text == "Email sent" || err.status == 200) {
+          this.contactForm.reset();
+          alert("Your message has been sent. We will get back to you soon.");
+        } else {
+          alert(
+            "Message could not be sent. Please check your internet or try again later."
+          );
+        }
       }
     );
   }
