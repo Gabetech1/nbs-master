@@ -29,8 +29,8 @@ export class ContactUsComponent implements OnInit {
       message: this.contactForm.value.message,
       admin_email: "admin@nulbulkshipping.com",
       site_name: "Nulbulk Shipping",
-      receiver_email: "jessyjee77@gmail.com",
-      receiver_name: "Jessy",
+      receiver_email: "info@nulbulkshipping.com",
+      receiver_name: "Info Mail",
     };
     this.api.sendMessage(data).subscribe(
       (res) => {
