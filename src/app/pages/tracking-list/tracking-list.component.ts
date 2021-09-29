@@ -77,13 +77,18 @@ export class TrackingListComponent implements OnInit {
 
   delete(id) {
     //console.log(id)
+    const id_no = {
+      id: id,
+    };
     if (confirm("Are you sure you want to delete this tracking details?")) {
-      this.api.deleteTrackById(id).subscribe(
+      this.api.deleteTrackById(id_no).subscribe(
         (res) => {
+          // console.log(res);
           window.location.reload();
-          ///  this.router.navigate(['/nul-admin/tracking_list'])
+          // this.router.navigate(['/nul-admin/tracking_list'])
         },
         (err) => {
+          // console.log(err);
           window.location.reload();
           //console.log(err)
         }

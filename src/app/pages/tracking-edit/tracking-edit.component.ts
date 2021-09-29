@@ -38,8 +38,11 @@ export class TrackingEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    const id = this.route.snapshot.paramMap.get("id");
-    this.api.getrackById(id).subscribe(
+    //const id = this.route.snapshot.paramMap.get("id");
+    const id = {
+      id: this.route.snapshot.paramMap.get("id"),
+    };
+    this.api.editrack(id).subscribe(
       (res) => {
         // console.log(res)
         this.trackid = res["id"];

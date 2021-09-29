@@ -20,11 +20,11 @@ export class TrackingPageComponent implements OnInit {
     const data = {
       track: num.value.track,
     };
-    this.api.getrackByNum(data).subscribe(
+    this.api.trackByNum(data).subscribe(
       (res) => {
-        //  console.log(res)
+        console.log(res);
         this.ship = res;
-        //  console.log(this.ship)
+        // console.log(this.ship)
         if (this.ship.length == 0) {
           this.api.showAlert(
             "danger",
@@ -33,7 +33,7 @@ export class TrackingPageComponent implements OnInit {
         }
       },
       (err) => {
-        // console.log(err)
+        console.log(err);
       }
     );
   }

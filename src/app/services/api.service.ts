@@ -22,12 +22,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  register(data) {
-    console.log(data);
-    return this.http.post(this.url + "/siginUpUser.php", data);
-  }
-  login(data) {
-    var headers = new HttpHeaders();
+  httpHeaders() {
+    let headers = new HttpHeaders();
     headers.append("Accept", "application/json");
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "*");
@@ -36,45 +32,68 @@ export class ApiService {
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
     );
+    return headers;
+  }
+
+  register(data) {
+    console.log(data);
+    return this.http.post(this.url + "/siginUpUser.php", data, {
+      headers: this.httpHeaders(),
+    });
+  }
+  login(data) {
     console.log(data);
     return this.http.post(this.url + "/loginUser.php", data, {
-      headers: headers,
+      headers: this.httpHeaders(),
+    });
+  }
+  editrack(data) {
+    console.log(data);
+    return this.http.post(this.url + "/getrackByid.php", data, {
+      headers: this.httpHeaders(),
+    });
+  }
+
+  trackByNum(data) {
+    console.log(data);
+    return this.http.post(this.url + "/getrackByNum", data, {
+      headers: this.httpHeaders(),
     });
   }
 
   track(data) {
     console.log(data);
-    return this.http.post(this.url + "/postTrackingData.php", data);
+    return this.http.post(this.url + "/postTrackingData.php", data, {
+      headers: this.httpHeaders(),
+    });
   }
 
   getrack() {
-    return this.http.get(this.url + "/getTrackingData.php");
+    return this.http.get(this.url + "/getTrackingData");
   }
 
   getrackById(id) {
-    return this.http.post(this.url + "/getrackById.php", id);
+    return this.http.post(this.url + "/getrackByid.php", id, {
+      headers: this.httpHeaders(),
+    });
   }
 
   updateTrackById(id) {
-    return this.http.put(this.url + "/updateTrackById.php", id);
+    return this.http.post(this.url + "/updateTrackById.php", id, {
+      headers: this.httpHeaders(),
+    });
   }
 
   deleteTrackById(id) {
     console.log(id);
-    return this.http.put(this.url + "/deleteTrackById.php", id);
-  }
-
-  getrackByNum(num) {
-    return this.http.post(this.url + "/getrackByNum.php", num);
+    return this.http.post(this.url + "/deleteTrackById", id, {
+      headers: this.httpHeaders(),
+    });
   }
 
   sendMessage(data) {
-    var headers = new HttpHeaders();
-    headers.append("Accept", "application/json");
-    headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "*");
     return this.http.post(this.smtp_url + "/sendmail.php", data, {
-      headers: headers,
+      headers: this.httpHeaders(),
     });
   }
 
