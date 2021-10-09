@@ -114,6 +114,7 @@ export class TrackingEditComponent implements OnInit {
             "Tracking Details has been updated successfully"
           );
           this.router.navigate(["/nul-admin/tracking_list"]);
+          window.location.reload();
         } else {
           this.api.showAlert(
             "failed",
