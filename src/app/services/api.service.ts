@@ -69,9 +69,7 @@ export class ApiService {
   }
 
   getrack() {
-    return this.http.get(this.url + "/getTrackingData", {
-      headers: this.httpHeaders(),
-    });
+    return this.http.get(this.url + "/getTrackingData");
   }
 
   getrackById(id) {
