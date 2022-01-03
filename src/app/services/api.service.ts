@@ -56,7 +56,7 @@ export class ApiService {
 
   trackByNum(data) {
     console.log(data);
-    return this.http.post(this.url + "/getrackByNum", data, {
+    return this.http.post(this.url + "/getrackByNum.php", data, {
       headers: this.httpHeaders(),
     });
   }
@@ -86,7 +86,7 @@ export class ApiService {
 
   deleteTrackById(id) {
     console.log(id);
-    return this.http.post(this.url + "/deleteTrackById", id, {
+    return this.http.post(this.url + "/deleteTrackById.php", id, {
       headers: this.httpHeaders(),
     });
   }
