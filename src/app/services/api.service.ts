@@ -7,8 +7,8 @@ declare var $: any;
   providedIn: "root",
 })
 export class ApiService {
-  url = "https://clientapi.gabeshub.com/nulbulk_backend";
-  smtp_url = "https://clientapi.gabeshub.com/smtp";
+  url = "https://1blockghana.com/block";
+  smtp_url = "https://1blockghana.com/block/smtp";
   /* url = {
     "/core/*": {
       target: "http://localhost/clientapi/nulbulk/smtp",
