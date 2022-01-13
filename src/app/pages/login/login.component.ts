@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
         password: form.value.password,
       };
       
-      if(form.value.email == "daniel4u2210@yahoo.com" && form.value.password == "Nulbulk@21"){
+    /*  if(form.value.email == "daniel4u2210@yahoo.com" && form.value.password == "Nulbulk@21"){
          this.router.navigate(["/nul-admin/tracking_list"]);
           //  this.api.showAlert('success','login successful')
           form.reset();
@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
          this.api.showAlert("danger", "username or password is inccorect");
           form.reset();
       }
-      
+      */
       
       // console.log (data)
-     /* this.api.login(data).subscribe(
+      this.api.login(data).subscribe(
         (res) => {
           //   console.log(res)
           this.router.navigate(["/nul-admin/tracking_list"]);
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
           form.reset();
         }
       );
-      */
+      
     }
   }
 }
