@@ -26,7 +26,7 @@ export class ApiService {
     let headers = new HttpHeaders();
     headers.append("Accept", "application/json");
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "*");
+   // headers.append("Access-Control-Allow-Origin", "*"); 
     headers.append("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     headers.append(
       "Access-Control-Allow-Headers",
