@@ -7,8 +7,8 @@ declare var $: any;
   providedIn: "root",
 })
 export class ApiService {
-  url = "https://clientapi.developmentsite.top/nulbulk";
-  smtp_url = "https://clientapi.developmentsite.top/nulbulk/smtp";
+  url = "https://apis.developmentsite.top/nulbulk";
+  smtp_url = "https://apis.developmentsite.top/nulbulk/smtp";
   /* url = {
     "/core/*": {
       target: "http://localhost/clientapi/nulbulk/smtp",
