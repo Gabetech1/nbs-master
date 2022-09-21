@@ -7,7 +7,7 @@ declare var $: any;
   providedIn: "root",
 })
 export class ApiService {
-  url = "https://apis.developmentsite.top/nulbulk";
+  url = "https://manage.gabeshub.com/nulbulk_backend";
   smtp_url = "https://apis.developmentsite.top/nulbulk/smtp";
   /* url = {
     "/core/*": {
