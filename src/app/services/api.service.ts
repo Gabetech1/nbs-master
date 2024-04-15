@@ -30,13 +30,13 @@ export class ApiService {
   }
 
   register(data) {
-    console.log(data);
+  //  console.log(data);
     return this.http.post(this.url + "/siginUpUser.php", data, {
       headers: this.httpHeaders(),
     });
   }
   login(data) {
-    console.log(data);
+   // console.log(data);
     return this.http.post(this.url + "/loginUser.php", data, {
       headers: this.httpHeaders(),
     });
@@ -49,14 +49,14 @@ export class ApiService {
   }
 
   trackByNum(data) {
-    console.log(data);
+  //  console.log(data);
     return this.http.post(this.url + "/getrackByNum.php", data, {
       headers: this.httpHeaders(),
     });
   }
 
   track(data) {
-    console.log(data);
+  //  console.log(data);
     return this.http.post(this.url + "/postTrackingData.php", data, {
       headers: this.httpHeaders(),
     });
@@ -79,7 +79,7 @@ export class ApiService {
   }
 
   deleteTrackById(id) {
-    console.log(id);
+  //  console.log(id);
     return this.http.post(this.url + "/deleteTrackById.php", id, {
       headers: this.httpHeaders(),
     });
